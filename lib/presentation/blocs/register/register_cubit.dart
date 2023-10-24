@@ -1,5 +1,7 @@
-import 'package:bloc/bloc.dart';
+import 'package:equatable/equatable.dart';
+import 'package:flutter_formulario/infraestructure/inputs/input.dart';
 import 'package:formz/formz.dart';
+import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'register_state.dart';
@@ -11,7 +13,7 @@ class RegisterCubit extends Cubit<RegisterFormState>{
   void onSubmit() {
     emit(
       state.copyWith(
-        formState: FormStatus.validating,
+        formStatus: FormStatus.validating,
         username: Username.dirty(state.username.value),
         password: Password.dirty(state.password.value),
         email: Email.dirty(state.email.value),

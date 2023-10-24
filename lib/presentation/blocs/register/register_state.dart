@@ -1,5 +1,4 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:equatable/equatable.dart';
 part of 'register_cubit.dart';
 
 enum FormStatus{invalid, valid, validating, posting}
@@ -7,14 +6,14 @@ enum FormStatus{invalid, valid, validating, posting}
 class RegisterFormState extends Equatable {
   final FormStatus formStatus;
   final bool isValid;
-  final UserName userName;
+  final Username username;
   final Email email;
   final Password password;
 
-  RegisterFormState({
-     this.formStatus = FormStatus.isValid,
+  const RegisterFormState({
+     this.formStatus = FormStatus.invalid,
      this.isValid = false,
-     this.userName = const Username.pure(),
+     this.username = const Username.pure(),
      this.email = const Email.pure(),
      this.password = const Password.pure(),
   });
@@ -22,13 +21,13 @@ class RegisterFormState extends Equatable {
   RegisterFormState copyWith({
     FormStatus? formStatus,
     bool? isValid,
-    UserName? userName,
+    Username? username,
     Email? email,
     Password? password,
   }) => RegisterFormState(
       formStatus: formStatus ?? this.formStatus,
       isValid: isValid ?? this.isValid,
-      userName: userName ?? this.userName,
+      username: username ?? this.username,
       email: email ?? this.email,
       password: password ?? this.password,
     );
@@ -37,7 +36,7 @@ class RegisterFormState extends Equatable {
   List<Object> get props => [
       formStatus,
       isValid,
-      userName,
+      username,
       email,
       password,
     ];

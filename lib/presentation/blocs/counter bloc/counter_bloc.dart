@@ -1,11 +1,8 @@
+import 'package:equatable/equatable.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 part 'counter_event.dart';
 part 'counter_state.dart';
-
-import 'dart:ffi';
-import 'dart:js_util';
-
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:equatable/equatable.dart';
 
 class CounterBloc extends Bloc<CounterEvent, CounterState>{
   CounterBloc(): super(const CounterState()){

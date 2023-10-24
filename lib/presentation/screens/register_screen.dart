@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_formulario/presentation/blocs/register/register_cubit.dart';
 import 'package:flutter_formulario/presentation/widgets/inputs/custom_text_form_filed.dart';
 
 class RegisterScreen extends StatelessWidget {

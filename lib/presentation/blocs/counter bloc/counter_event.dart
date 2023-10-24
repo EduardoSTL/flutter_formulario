@@ -8,9 +8,7 @@ abstract class CounterEvent{
 class CounterIncreased extends CounterEvent {
   final int value;
 
-  CounterIncreased({
-    required this.value,
-  });
+  const CounterIncreased(this.value);
 }
 
 class CounterReset extends CounterEvent {}

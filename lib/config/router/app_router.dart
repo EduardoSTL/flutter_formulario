@@ -1,3 +1,7 @@
+import 'package:flutter_formulario/presentation/screens/bloc_counter_screen.dart';
+import 'package:flutter_formulario/presentation/screens/cubit_counter_screen.dart';
+import 'package:flutter_formulario/presentation/screens/home_screen.dart';
+import 'package:flutter_formulario/presentation/screens/register_screen.dart';
 import 'package:go_router/go_router.dart';
 
 final appRouter = GoRouter(routes: [
